@@ -1,32 +1,19 @@
-lib-cov
-*.seed
+# Generated site
+_site/
+.jekyll-metadata
+
+# Logs
+logs/
 *.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+npm-debug.log*
 
-pids
-logs
-results
-
-npm-debug.log
+# Dependency directories
 node_modules
 
-coverage/
-doc/
-bower_components/
-junit/
+# Optional npm cache directory
+.npm
 
-*.iml
-.idea/
-.vscode/
-jsconfig.json
+# OS X
+.DS_Store
 
-.nyc_output
-coverage/
-doc/
-node_modules/
-typings
-yarn.lock
+.jekyll-metadata

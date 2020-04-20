@@ -1,71 +1,63 @@
-<img src="https://raw.githubusercontent.com/js-data/js-data/master/js-data.png" alt="js-data logo" title="js-data" align="right" width="96" height="96" />
+# Parse Docs
 
-# [js-data v3](http://www.js-data.io/) [![Slack][1]][2] [![NPM][3]][4] [![Downloads][5]][6] [![Coverage][7]][8]
+[![Join The Conversation](https://img.shields.io/discourse/https/community.parseplatform.org/topics.svg)](https://community.parseplatform.org/c/parse-server)
+[![Backers on Open Collective](https://opencollective.com/parse-server/backers/badge.svg)][open-collective-link]
+[![Sponsors on Open Collective](https://opencollective.com/parse-server/sponsors/badge.svg)][open-collective-link]
+[![License][license-svg]][license-link]
+[![Twitter Follow](https://img.shields.io/twitter/follow/ParsePlatform.svg?label=Follow%20us%20on%20Twitter&style=social)](https://twitter.com/intent/follow?screen_name=ParsePlatform)
 
-| __Browser tests__ | __Node.js tests__ |
-| ---------------------------------|----|
-| [![Tests][9]][10] | [![Tests][11]][12] [![Tests][13]][12] [![Tests][14]][12] [![Tests][15]][12] [![Tests][16]][12] [![Tests][17]][12] |
 
-[1]: http://slack.js-data.io/badge.svg
-[2]: http://slack.js-data.io
-[3]: https://img.shields.io/npm/v/js-data.svg?style=flat
-[4]: https://www.npmjs.org/package/js-data
-[5]: https://img.shields.io/npm/dm/js-data.svg?style=flat
-[6]: https://www.npmjs.org/package/js-data
-[7]: https://img.shields.io/codecov/c/github/js-data/js-data/master.svg
-[8]: https://codecov.io/github/js-data/js-data
-[9]: https://saucelabs.com/browser-matrix/jsdata.svg
-[10]: https://saucelabs.com/u/jsdata
-[11]: https://img.shields.io/circleci/project/js-data/js-data.svg
-[12]: https://img.shields.io/circleci/project/js-data/js-data.svg
-[13]: https://img.shields.io/badge/Node.js-v6.x-brightgreen.svg
-[14]: https://img.shields.io/badge/Node.js-v5.x-brightgreen.svg
-[15]: https://img.shields.io/badge/Node.js-v4.x-brightgreen.svg
-[16]: https://img.shields.io/badge/Node.js-v0.12.x-brightgreen.svg
-[17]: https://img.shields.io/badge/Node.js-v0.10.x-brightgreen.svg
+These are the markdown sources for all of the [Parse SDK guides](https://parse-community.github.io/#sdks). The content for the guides is stored in this repo, and we use Jekyll to generate a static site that is hosted on GitHub Pages.
 
-__Community & Maintainers always welcome - message in #jsdata-core-discuss Slack channel if you want to help with
-issues, improvements, tests, documentation, tutorials, adapters, etc.. There are several adapters that could use minor maintenance as well as new adapters to be written.__
+## Repository Structure
 
-JSData is a framework-agnostic, datastore-agnostic ORM for Node.js and the
-Browser.
+The guides are organized by platform. Each platform directory contains a set of markdown files, one for each main section in the guide.
 
-Adapters allow JSData to connect to various data sources such as Firebase,
-MySql, RethinkDB, MongoDB, localStorage, Redis, a REST API, etc. With JSData
-you can re-use your data modeling code between environments, keep your data
-layer intact when transitioning between app frameworks, and work with a unified
-data API on the server and the client. JSData employs conventions for rapid
-development, but allows for endless customization in order to meet your
-particular needs.
+    .
+    ├── {platform}
+    │   └── {section}
+    └── common
+        └── {section}
 
-### Just getting started?
+For example, `/ios/` contains all of sections for the iOS guide. There is also a `common` folder that contains content that is shared amongst all of the guides. It helps us avoid duplicating content unnecessarily.
 
-Start with the [JSData Getting Started Tutorial][18] or explore the [API Reference Documentation][19].
+## Can I Access The Docs Offline?
 
-### Need help?
+This repository is public and all the files are in markdown. If you'd like to keep a copy locally, please do!
 
-Please [post a question][20] on Stack Overflow. **This is the preferred method.**
+## How Do I Contribute?
 
-You can also chat with folks on the [Slack Channel][21]. If you end up getting
-your question answered, please still consider consider posting your question to
-Stack Overflow (then possibly answering it yourself). Thanks!
+If you have any fixes or suggestions, simply send us a pull request!
 
-### Want to contribute?
+### Running The Site Locally
 
-Awesome! You can get started over at the [Contributing guide][22].
+You will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/), [Bundler](http://bundler.io/), and [npm](https://www.npmjs.com/get-npm).
 
-And thank you!
+Clone this repository, then install Jekyll and node packages:
 
-### License
+```
+bundle install
+npm install
+```
 
-[The MIT License (MIT)][23]
+Then run webpack and Jekyll:
 
-Copyright (c) 2014-2017 [js-data project authors][24]
+Start in Linux/OS X:
+```
+npm start
+```
 
-[18]: http://www.js-data.io/docs/home
-[19]: http://api.js-data.io/
-[20]: http://stackoverflow.com/questions/tagged/jsdata
-[21]: http://slack.js-data.io/
-[22]: https://github.com/js-data/js-data/blob/master/.github/CONTRIBUTING.md
-[23]: https://github.com/js-data/js-data/blob/master/LICENSE
-[24]: https://github.com/js-data/js-data/blob/master/AUTHORS
+Start in Windows command prompt:
+```
+npm run dev-win
+```
+
+Finally, open http://localhost:4000/ in your web browser.
+
+-----
+
+As of April 5, 2017, Parse, LLC has transferred this code to the parse-community organization, and will no longer be contributing to or distributing this code.
+
+[license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
+[license-link]: LICENSE
+[open-collective-link]: https://opencollective.com/parse-server
